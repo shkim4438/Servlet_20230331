@@ -1,4 +1,4 @@
-package com.study.servlet.controller;
+package com.servlet.study.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,6 +37,8 @@ public class UserInfo extends HttpServlet {
 		Map<String, String> userMap = new HashMap<>();
 		userMap.put("name", name);
 		userMap.put("phone", phone);
+		// map.put: key : value 에서 기존의 value를 수정 
+		// 즉, key값을 통해여 value값을 새로 수정하면 본래의 값에 덮어쓰여지는 형식.
 		
 		String userJson = gson.toJson(userMap);
 		System.out.println(userJson);
@@ -70,11 +72,14 @@ public class UserInfo extends HttpServlet {
 		Gson gson = new Gson();
 		
 		ServletInputStream inputStream = request.getInputStream();
+		System.out.println(inputStream);
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+		System.out.println(bufferedReader);
 		String json = "";
 		String line = null;
 		while((line = bufferedReader.readLine()) != null) {
 			json += line;
+			System.out.println(line);
 		}
 		json.replaceAll(" ", "");
 		System.out.println(json);

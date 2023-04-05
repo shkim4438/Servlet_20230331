@@ -6,6 +6,10 @@
   <packaging>war</packaging>
   <name>Servlet_Study_20230331</name>
   
+  <properties>
+	  <m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
+  </properties>
+  
   <dependencies>
 	<dependency>
 	    <groupId>org.projectlombok</groupId>
@@ -18,6 +22,12 @@
 	    <groupId>org.apache.tomcat</groupId>
 	    <artifactId>tomcat-jsp-api</artifactId>
 	    <version>9.0.73</version>
+	</dependency>
+
+	<dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>8.0.32</version>
 	</dependency>
 
 	<dependency>

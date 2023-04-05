@@ -1,4 +1,4 @@
-package com.study.servlet.controller;
+package com.servlet.study.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletConfig;
@@ -32,12 +32,13 @@ public class Helllo extends HttpServlet {
 		System.out.println("요청이 들어올 때마다 호출");
 		System.out.println(request.getMethod());
 		System.out.println(request.getRequestURL());
+		String string = "<h1>Hello Servlet</h1>";
 		response.getWriter().println("<html>"
 				+ "<head>"
 				+ "<title>Hello</title>"
 				+ "</head>"
 				+ "<body>"
-				+ "<h1>Hello Servlet</h1>"
+				+ string
 				+ "<h2>" + name + "</h2>"
 						+ "</body>"
 						+ "</html>");
